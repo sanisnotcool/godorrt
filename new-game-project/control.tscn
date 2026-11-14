@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bq3huk364skd3"]
+
+[ext_resource type="Script" uid="uid://vw1uik1lapom" path="res://control.gd" id="1_0fbet"]
+
+[sub_resource type="Animation" id="Animation_62e2m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_qtu10"]
+resource_name = "new_animation"
+length = 2.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ee4bf"]
+_data = {
+&"RESET": SubResource("Animation_62e2m"),
+&"new_animation": SubResource("Animation_qtu10")
+}
+
+[node name="Control" type="Control" unique_id=1639395479]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fbet")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=783062592]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -24.0
+offset_right = 1178.0
+offset_bottom = 680.0
+
+[node name="Button" type="Button" parent="." unique_id=1590472261]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 296.0
+offset_top = 216.0
+offset_right = 788.0
+offset_bottom = 402.0
+theme_override_font_sizes/font_size = 49
+text = "ENTER"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Button" unique_id=1456228705]
+libraries/ = SubResource("AnimationLibrary_ee4bf")

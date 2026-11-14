@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://4pqund3nukl7"]
+
+[ext_resource type="Texture2D" uid="uid://bme8mndn5s1ur" path="res://logoOmnivox-COULEURS-1.jpg" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=456256539]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=28544766]
+offset_left = -30.0
+offset_top = -42.0
+offset_right = 1184.0
+offset_bottom = 686.0
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=2122563581]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 85.0
+offset_right = 870.0
+offset_bottom = 229.0
+texture = ExtResource("1_wtcfe")
+
+[node name="Button" type="Button" parent="." unique_id=341478990]
+offset_left = 431.0
+offset_top = 224.0
+offset_right = 755.0
+offset_bottom = 297.0
